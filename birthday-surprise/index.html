@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday  Arianne My love 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="hearts" aria-hidden="true"></div>
+
+<!-- 1. FAIRY LIGHTS -->
+<section class="scene active" id="scene-lights">
+  <div class="strand" id="strand"></div>
+  <div class="lights-name" id="lightsName"></div>
+  <p class="lights-sub" id="lightsSub">made just for you</p>
+  <p class="tap-hint" id="lightsHint">Tap anywhere to continue</p>
+</section>
+
+<!-- 2. GIFT BOX -->
+<section class="scene" id="scene-gift">
+  <p class="kicker">One more thing before we begin…</p>
+  <button class="gift-btn" id="giftBtn" aria-label="Open your gift">
+    <div class="gift" id="gift">
+      <div class="glow"></div>
+      <div class="lid"><div class="bow"></div></div>
+      <div class="box"></div>
+    </div>
+  </button>
+  <p class="tap-hint show" id="giftHint">Tap the gift</p>
+</section>
+
+<!-- 3. CAKE -->
+<section class="scene" id="scene-cake">
+  <p class="kicker">Something special is waiting for you…</p>
+
+  <button class="cake-btn" id="cake" aria-label="Open your birthday cake">
+    <div class="cake">
+      <div class="plate"></div>
+      <div class="tier t1"><span>Happy Birthday My Love</span></div>
+      <div class="tier t2"></div>
+      <div class="berries"><i></i><i></i><i></i><i></i></div>
+      <div class="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+    </div>
+  </button>
+
+  <p id="hint"> Make a wish before then Tap the cake</p>
+</section>
+
+<!-- 4. GARDEN -->
+<section class="scene" id="scene-garden">
+  <div class="sun"></div>
+  <h1 class="bday">Happy Birthday,<br><span id="name">My Love</span>!<small id="from"></small></h1>
+
+  <div class="actions" id="actions">
+    <button class="btn" data-open="m-msg">💌 Message</button>
+    <button class="btn alt" data-open="m-flowers">🌷 Flowers</button>
+    <button class="btn alt2" data-open="m-scratch">📸 Scratch me</button>
+  </div>
+
+  <div id="garden"></div>
+  <div class="hill"></div>
+</section>
+
+<!-- MESSAGE -->
+<div class="modal" id="m-msg" role="dialog" aria-modal="true" aria-label="Birthday message">
+  <div class="card">
+    <button class="close" aria-label="Close">✕</button>
+    <h2>For you</h2>
+    <p id="typed"></p>
+    <p class="sign" id="sign"></p>
+  </div>
+</div>
+
+<!-- FLOWERS -->
+<div class="modal" id="m-flowers" role="dialog" aria-modal="true" aria-label="Flowers for you">
+  <div class="card">
+    <button class="close" aria-label="Close">✕</button>
+    <div class="bouquet">💐</div>
+    <h2 style="margin-top:1rem">These are for you</h2>
+    <p class="note">I'd give you every flower in the world if I could to make you Happy.</p>
+  </div>
+</div>
+
+<!-- SCRATCH -->
+<div class="modal" id="m-scratch" role="dialog" aria-modal="true" aria-label="Scratch to reveal">
+  <div class="card">
+    <button class="close" aria-label="Close">✕</button>
+    <h2>Scratch to reveal</h2>
+    <div class="scratch-wrap" id="scratchWrap">
+      <img id="photo" alt="A surprise photo">
+      <div class="missing" id="missing">Add your picture to this folder and name it <b>&nbsp;photo1.jpg&nbsp;</b> (or edit CONFIG.photos below).</div>
+      <canvas id="scratch"></canvas>
+    </div>
+    <p class="tip" id="tip">Use your finger or mouse to scratch ✨</p>
+    <p id="scratchCap"></p>
+    <p class="photo-caption" id="photoCaption"></p>
+    <div class="scratch-nav">
+      <button class="navbtn" id="prevPhoto" aria-label="Previous photo">‹</button>
+      <div class="dots" id="dots"></div>
+      <button class="navbtn" id="nextPhoto" aria-label="Next photo">›</button>
+    </div>
+  </div>
+</div>
+
+<!-- FINALE -->
+<div class="modal" id="m-finale" role="dialog" aria-modal="true" aria-label="A last surprise">
+  <div class="card">
+    <button class="close" aria-label="Close">✕</button>
+    <div class="bouquet">🎉💖🎉</div>
+    <h2 style="margin-top:1rem">You found everything</h2>
+    <p class="note" id="finaleNote"></p>
+  </div>
+</div>
+
+<div class="rain" id="rain" aria-hidden="true"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
